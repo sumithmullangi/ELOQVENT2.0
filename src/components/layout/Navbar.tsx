@@ -135,67 +135,27 @@ export const Navbar: React.FC = () => {
           <Link
             to="/"
             className="brand-link focus-visible-ring"
-            aria-label="ELOQVENT 2K26 Home"
+            aria-label="Engineers Without Borders MLRIT - ELOQVENT 2K26"
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '0.75rem',
               textDecoration: 'none',
               flexShrink: 0,
-              borderRadius: 'var(--radius-sm)'
+              padding: '0.2rem 0'
             }}
           >
-            <div
+            <img
+              src="/ewb-mlrit-logo.png"
+              alt="Engineers Without Borders MLRIT"
               style={{
-                width: '38px',
-                height: '38px',
-                borderRadius: '10px',
-                background: 'linear-gradient(135deg, #d4b28c 0%, #f5d7b5 40%, #2997ff 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 0 18px rgba(212, 178, 140, 0.35)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-                flexShrink: 0
+                height: '48px',
+                width: 'auto',
+                maxWidth: '220px',
+                objectFit: 'contain',
+                display: 'block',
+                filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5))'
               }}
-            >
-              <Sparkles size={20} color="#000000" aria-hidden="true" />
-            </div>
-            <div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-lining)',
-                  fontSize: '1.05rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.06em',
-                  lineHeight: 1,
-                  color: '#f5f5f7',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.35rem'
-                }}
-              >
-                ELOQVENT <span style={{ 
-                  background: 'linear-gradient(135deg, #d4b28c 0%, #2997ff 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  fontWeight: 700,
-                  fontSize: '0.95rem'
-                }}>2K26</span>
-              </div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '0.625rem',
-                  color: 'var(--text-muted)',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  marginTop: '3px'
-                }}
-              >
-                National Symposium
-              </div>
-            </div>
+            />
           </Link>
 
           {/* Desktop Navigation Landmark */}

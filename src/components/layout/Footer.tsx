@@ -89,29 +89,22 @@ export const Footer: React.FC = () => {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.625rem',
                 marginBottom: '1rem',
                 textDecoration: 'none'
               }}
-              aria-label="ELOQVENT 2K26 Home"
+              aria-label="Engineers Without Borders MLRIT"
             >
-              <div
+              <img
+                src="/ewb-mlrit-logo.png"
+                alt="Engineers Without Borders MLRIT"
                 style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '6px',
-                  background: 'linear-gradient(135deg, #d4b28c 0%, #2997ff 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
+                  height: '46px',
+                  width: 'auto',
+                  maxWidth: '220px',
+                  objectFit: 'contain',
+                  display: 'block'
                 }}
-              >
-                <Sparkles size={18} color="#000000" aria-hidden="true" />
-              </div>
-              <span style={{ fontFamily: 'var(--font-lining)', fontSize: '1.05rem', fontWeight: 700, letterSpacing: '0.06em', color: '#f5f5f7' }}>
-                ELOQVENT 2K26
-              </span>
+              />
             </Link>
             <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
               The national platform bridging rhetorical mastery and human-centred technological innovation for sustainable societal impact.
