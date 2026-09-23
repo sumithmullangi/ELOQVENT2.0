@@ -41,10 +41,10 @@ export const Button: React.FC<ButtonProps> = ({
     gap: '0.5rem',
     fontWeight: 600,
     fontFamily: 'var(--font-body)',
-    borderRadius: 'var(--radius-md)',
+    borderRadius: 'var(--radius-pill)',
     textDecoration: 'none',
     cursor: isButtonDisabled ? 'not-allowed' : 'pointer',
-    transition: 'all var(--transition-base)',
+    transition: 'transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast)',
     border: '1px solid transparent',
     whiteSpace: 'nowrap',
     width: fullWidth ? '100%' : 'auto',
@@ -56,34 +56,37 @@ export const Button: React.FC<ButtonProps> = ({
   // Size styles
   const sizeStyles: Record<ButtonSize, React.CSSProperties> = {
     sm: {
-      padding: '0.45rem 0.875rem',
+      padding: '0.45rem 1rem',
       fontSize: '0.8125rem',
-      letterSpacing: '0.01em'
+      letterSpacing: '0.02em'
     },
     md: {
-      padding: '0.675rem 1.35rem',
+      padding: '0.675rem 1.45rem',
       fontSize: '0.9375rem',
-      letterSpacing: '-0.01em'
+      letterSpacing: '0.01em'
     },
     lg: {
-      padding: '0.875rem 1.85rem',
-      fontSize: '1.05rem',
-      letterSpacing: '-0.01em'
+      padding: '0.875rem 2rem',
+      fontSize: '1rem',
+      letterSpacing: '0.01em'
     }
   };
 
   // Variant styles
   const variantStyles: Record<ButtonVariant, React.CSSProperties> = {
     primary: {
-      background: 'linear-gradient(135deg, #38bdf8 0%, #10b981 100%)',
-      color: '#070a10',
-      boxShadow: '0 4px 14px rgba(56, 189, 248, 0.25)',
+      background: '#ffffff',
+      color: '#050816',
+      border: '1px solid rgba(255, 255, 255, 0.9)',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.2), inset 0 1px 1px #ffffff',
       fontWeight: 700
     },
     secondary: {
-      background: 'var(--bg-surface-2)',
-      color: 'var(--text-primary)',
-      border: '1px solid var(--border-medium)'
+      background: 'rgba(255, 255, 255, 0.05)',
+      color: '#f8fafc',
+      border: '1px solid rgba(255, 255, 255, 0.18)',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)'
     },
     ghost: {
       background: 'transparent',
@@ -95,15 +98,15 @@ export const Button: React.FC<ButtonProps> = ({
       border: '1px solid var(--border-bright)'
     },
     innovex: {
-      background: 'var(--innovex-gradient)',
+      background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
       color: '#031c12',
-      boxShadow: '0 4px 14px rgba(16, 185, 129, 0.25)',
+      boxShadow: '0 4px 16px rgba(16, 185, 129, 0.3)',
       fontWeight: 700
     },
     elocution: {
-      background: 'var(--elocution-gradient)',
+      background: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)',
       color: '#04101e',
-      boxShadow: '0 4px 14px rgba(56, 189, 248, 0.25)',
+      boxShadow: '0 4px 16px rgba(56, 189, 248, 0.3)',
       fontWeight: 700
     },
     disabled: {

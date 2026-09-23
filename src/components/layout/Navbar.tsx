@@ -225,8 +225,10 @@ export const Navbar: React.FC = () => {
                       className="nav-desktop-link focus-visible-ring"
                       style={{
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.875rem',
+                        fontSize: '0.8125rem',
                         fontWeight: active ? 700 : 500,
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
                         color: active ? '#ffffff' : 'var(--text-secondary)',
                         position: 'relative',
                         padding: '0.5rem 0.5rem',
@@ -265,11 +267,12 @@ export const Navbar: React.FC = () => {
             <div className="desktop-cta" style={{ display: 'none' }}>
               <Link
                 to="/register"
-                className="btn-luminous-cyan focus-visible-ring"
+                className="btn-hero-primary focus-visible-ring"
                 style={{
                   padding: '0.5rem 1.25rem',
                   fontSize: '0.8125rem',
-                  letterSpacing: '0.02em'
+                  letterSpacing: '0.04em',
+                  textTransform: 'uppercase'
                 }}
               >
                 <span>REGISTER NOW</span>
