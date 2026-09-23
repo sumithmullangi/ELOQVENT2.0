@@ -21,6 +21,9 @@ import { ElocutionProgressionArc } from '../components/sections/ElocutionProgres
 import { ElocutionTimeline } from '../components/sections/ElocutionTimeline';
 import { CTASection } from '../components/sections/CTASection';
 import { ELOCUTION_PHASES } from '../data/elocutionPhases';
+import { TiltCard } from '../components/3d/TiltCard';
+import { ScrollReveal } from '../components/3d/ScrollReveal';
+import { BackgroundParticles } from '../components/3d/BackgroundParticles';
 
 export const ElocutionPage: React.FC = () => {
   useEffect(() => {
@@ -41,7 +44,9 @@ export const ElocutionPage: React.FC = () => {
           overflow: 'hidden'
         }}
       >
-        <Container size="lg">
+        <BackgroundParticles particleCount={25} speedMultiplier={0.25} />
+        <Container size="lg" style={{ position: 'relative', zIndex: 1 }}>
+          <ScrollReveal animation="fade-up" duration={600}>
           {/* Breadcrumb Navigation */}
           <nav 
             aria-label="Breadcrumb"
@@ -110,6 +115,7 @@ export const ElocutionPage: React.FC = () => {
               A premier collegiate oratorical proving ground. Participants engage in communication-building, structured debate, impromptu speaking, narrative storytelling, and persuasive expression across six progressive phases.
             </p>
           </div>
+          </ScrollReveal>
         </Container>
       </section>
 

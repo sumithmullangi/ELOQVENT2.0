@@ -24,6 +24,9 @@ import { Timeline } from '../components/sections/Timeline';
 import { JourneyArc } from '../components/sections/JourneyArc';
 import { CTASection } from '../components/sections/CTASection';
 import { INNOVEX_JOURNEY_STEPS, JOURNEY_OUTCOMES } from '../data/innovexJourney';
+import { TiltCard } from '../components/3d/TiltCard';
+import { ScrollReveal } from '../components/3d/ScrollReveal';
+import { BackgroundParticles } from '../components/3d/BackgroundParticles';
 
 export const JourneyPage: React.FC = () => {
   useEffect(() => {
@@ -53,7 +56,9 @@ export const JourneyPage: React.FC = () => {
           overflow: 'hidden'
         }}
       >
-        <Container size="lg">
+        <BackgroundParticles particleCount={25} speedMultiplier={0.25} />
+        <Container size="lg" style={{ position: 'relative', zIndex: 1 }}>
+          <ScrollReveal animation="fade-up" duration={600}>
           {/* Breadcrumb Navigation */}
           <nav 
             aria-label="Breadcrumb"
@@ -109,6 +114,7 @@ export const JourneyPage: React.FC = () => {
               INNOVEX guides collegiate delegates through a rigorous, human-centred innovation framework—moving systematically from understanding people and discovering a genuine problem to developing a viable solution, building a sustainable business model, and pitching for real-world impact.
             </p>
           </div>
+          </ScrollReveal>
         </Container>
       </section>
 

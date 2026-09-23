@@ -7,5 +7,15 @@ export default defineConfig({
   server: {
     port: 3000,
     open: false
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          lucide: ['lucide-react']
+        }
+      }
+    }
   }
 });

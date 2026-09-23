@@ -113,11 +113,12 @@ export const Navbar: React.FC = () => {
           top: 0,
           zIndex: 50,
           height: 'var(--nav-height)',
-          backgroundColor: scrolled ? 'rgba(7, 10, 16, 0.94)' : 'rgba(7, 10, 16, 0.75)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
+          backgroundColor: scrolled ? 'rgba(5, 8, 22, 0.92)' : 'rgba(5, 8, 22, 0.75)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
           borderBottom: `1px solid ${scrolled ? 'var(--border-medium)' : 'var(--border-subtle)'}`,
-          transition: 'background-color var(--transition-base), border-color var(--transition-base)'
+          transition: 'background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base)',
+          boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.4)' : 'none'
         }}
       >
         <div
@@ -138,7 +139,7 @@ export const Navbar: React.FC = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '0.625rem',
+              gap: '0.75rem',
               textDecoration: 'none',
               flexShrink: 0,
               borderRadius: 'var(--radius-sm)'
@@ -146,18 +147,19 @@ export const Navbar: React.FC = () => {
           >
             <div
               style={{
-                width: '36px',
-                height: '36px',
-                borderRadius: '8px',
-                background: 'linear-gradient(135deg, #38bdf8 0%, #10b981 100%)',
+                width: '38px',
+                height: '38px',
+                borderRadius: '10px',
+                background: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 50%, #10b981 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 0 15px rgba(56, 189, 248, 0.3)',
+                boxShadow: '0 0 18px rgba(56, 189, 248, 0.35)',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
                 flexShrink: 0
               }}
             >
-              <Sparkles size={20} color="#070a10" aria-hidden="true" />
+              <Sparkles size={20} color="#050816" aria-hidden="true" />
             </div>
             <div>
               <div
@@ -167,10 +169,19 @@ export const Navbar: React.FC = () => {
                   fontWeight: 800,
                   letterSpacing: '-0.02em',
                   lineHeight: 1,
-                  color: '#ffffff'
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.35rem'
                 }}
               >
-                ELOQVENT <span style={{ color: 'var(--innovex-accent)', fontSize: '1.1rem' }}>2K26</span>
+                ELOQVENT <span style={{ 
+                  background: 'linear-gradient(135deg, #38bdf8 0%, #a855f7 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  fontWeight: 800,
+                  fontSize: '1.15rem'
+                }}>2K26</span>
               </div>
               <div
                 style={{
@@ -179,10 +190,10 @@ export const Navbar: React.FC = () => {
                   color: 'var(--text-muted)',
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
-                  marginTop: '2px'
+                  marginTop: '3px'
                 }}
               >
-                Elocution & Innovex
+                National Symposium
               </div>
             </div>
           </Link>
@@ -198,7 +209,7 @@ export const Navbar: React.FC = () => {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1.25rem',
+                gap: '0.875rem',
                 listStyle: 'none',
                 margin: 0,
                 padding: 0
@@ -218,7 +229,7 @@ export const Navbar: React.FC = () => {
                         fontWeight: active ? 700 : 500,
                         color: active ? '#ffffff' : 'var(--text-secondary)',
                         position: 'relative',
-                        padding: '0.5rem 0.25rem',
+                        padding: '0.5rem 0.5rem',
                         display: 'inline-flex',
                         alignItems: 'center',
                         textDecoration: 'none',
@@ -226,18 +237,19 @@ export const Navbar: React.FC = () => {
                       }}
                     >
                       {link.name}
-                      {/* Active indicator bar - color-independent shape */}
+                      {/* Active indicator bar */}
                       {active && (
                         <span
                           aria-hidden="true"
                           style={{
                             position: 'absolute',
-                            bottom: '-2px',
-                            left: '0.25rem',
-                            right: '0.25rem',
+                            bottom: '0',
+                            left: '0.5rem',
+                            right: '0.5rem',
                             height: '2px',
                             background: 'linear-gradient(90deg, var(--elocution-accent), var(--innovex-accent))',
-                            borderRadius: '2px'
+                            borderRadius: '2px',
+                            boxShadow: '0 0 8px rgba(56, 189, 248, 0.6)'
                           }}
                         />
                       )}
@@ -251,9 +263,18 @@ export const Navbar: React.FC = () => {
           {/* Action CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
             <div className="desktop-cta" style={{ display: 'none' }}>
-              <Button to="/register" variant="primary" size="sm" icon={<ArrowRight size={14} />}>
-                REGISTER NOW
-              </Button>
+              <Link
+                to="/register"
+                className="btn-luminous-cyan focus-visible-ring"
+                style={{
+                  padding: '0.5rem 1.25rem',
+                  fontSize: '0.8125rem',
+                  letterSpacing: '0.02em'
+                }}
+              >
+                <span>REGISTER NOW</span>
+                <ArrowRight size={14} aria-hidden="true" />
+              </Link>
             </div>
 
             {/* Accessible Mobile Menu Trigger */}
@@ -266,7 +287,7 @@ export const Navbar: React.FC = () => {
               aria-expanded={isOpen}
               aria-controls="mobile-navigation-menu"
               style={{
-                background: 'transparent',
+                background: 'rgba(10, 16, 36, 0.6)',
                 border: '1px solid var(--border-medium)',
                 borderRadius: 'var(--radius-md)',
                 color: 'var(--text-primary)',
@@ -276,7 +297,9 @@ export const Navbar: React.FC = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 minWidth: '40px',
-                minHeight: '40px'
+                minHeight: '40px',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)'
               }}
             >
               {isOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
@@ -297,9 +320,9 @@ export const Navbar: React.FC = () => {
             position: 'fixed',
             inset: 0,
             zIndex: 49,
-            backgroundColor: 'rgba(7, 10, 16, 0.92)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
+            backgroundColor: 'rgba(5, 8, 22, 0.96)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -336,7 +359,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   fontFamily: 'var(--font-mono)',
                   fontSize: '0.75rem',
-                  color: 'var(--innovex-accent)'
+                  color: 'var(--cyan-accent)'
                 }}
               >
                 Two Tracks • One Experience
@@ -440,15 +463,21 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div style={{ marginTop: '2rem' }} onClick={(e) => e.stopPropagation()}>
-            <Button
+            <Link
               to="/register"
-              variant="primary"
-              size="lg"
-              fullWidth
-              icon={<ArrowRight size={18} />}
+              onClick={handleCloseMenu}
+              className="btn-luminous-cyan focus-visible-ring"
+              style={{
+                width: '100%',
+                padding: '0.875rem 1.5rem',
+                fontSize: '1rem',
+                letterSpacing: '0.02em',
+                boxSizing: 'border-box'
+              }}
             >
-              REGISTER NOW
-            </Button>
+              <span>REGISTER NOW</span>
+              <ArrowRight size={18} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       )}

@@ -30,6 +30,9 @@ import { Button } from '../components/ui/Button';
 import { TrackComparison } from '../components/sections/TrackComparison';
 import { CTASection } from '../components/sections/CTASection';
 import { ELOCUTION_PILLARS, INNOVEX_THEMES } from '../data/eventData';
+import { TiltCard } from '../components/3d/TiltCard';
+import { ScrollReveal } from '../components/3d/ScrollReveal';
+import { BackgroundParticles } from '../components/3d/BackgroundParticles';
 
 export const TracksPage: React.FC = () => {
   useEffect(() => {
@@ -76,58 +79,61 @@ export const TracksPage: React.FC = () => {
           overflow: 'hidden'
         }}
       >
-        <Container size="lg">
-          {/* Breadcrumb */}
-          <nav 
-            aria-label="Breadcrumb"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '0.8125rem',
-              color: 'var(--text-muted)',
-              marginBottom: '1.5rem'
-            }}
-          >
-            <Link to="/" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
-              Home
-            </Link>
-            <ChevronRight size={14} color="var(--text-muted)" aria-hidden="true" />
-            <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
-              Tracks
-            </span>
-          </nav>
-
-          <div style={{ maxWidth: '920px' }}>
-            <Eyebrow variant="neutral" icon={<Layers size={13} color="var(--elocution-accent)" />} style={{ marginBottom: '1rem' }}>
-              THE TWO TRACKS
-            </Eyebrow>
-
-            <h1 
+        <BackgroundParticles particleCount={25} speedMultiplier={0.25} />
+        <Container size="lg" style={{ position: 'relative', zIndex: 1 }}>
+          <ScrollReveal animation="fade-up" duration={600}>
+            {/* Breadcrumb */}
+            <nav 
+              aria-label="Breadcrumb"
               style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2.25rem, 5vw + 0.5rem, 4rem)',
-                fontWeight: 800,
-                letterSpacing: '-0.03em',
-                lineHeight: 1.08,
-                color: '#ffffff',
-                marginBottom: '1.25rem'
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                fontSize: '0.8125rem',
+                color: 'var(--text-muted)',
+                marginBottom: '1.5rem'
               }}
             >
-              Two Specialized Tracks. One Unified Experience.
-            </h1>
+              <Link to="/" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                Home
+              </Link>
+              <ChevronRight size={14} color="var(--text-muted)" aria-hidden="true" />
+              <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
+                Tracks
+              </span>
+            </nav>
 
-            <p 
-              style={{
-                fontSize: 'clamp(1.05rem, 1.25vw + 0.5rem, 1.25rem)',
-                color: 'var(--text-secondary)',
-                lineHeight: 1.65,
-                margin: 0
-              }}
-            >
-              ELOQVENT 2K26 provides two complementary participant experiences: <strong>ELOCUTION</strong> develops the ability to communicate and defend ideas under rigorous adjudication, while <strong>INNOVEX</strong> empowers delegates to discover, design, develop, and present human-centred solutions to real-world challenges.
-            </p>
-          </div>
+            <div style={{ maxWidth: '920px' }}>
+              <Eyebrow variant="neutral" icon={<Layers size={13} color="var(--elocution-accent)" />} style={{ marginBottom: '1rem' }}>
+                THE TWO TRACKS
+              </Eyebrow>
+
+              <h1 
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(2.25rem, 5vw + 0.5rem, 4rem)',
+                  fontWeight: 800,
+                  letterSpacing: '-0.03em',
+                  lineHeight: 1.08,
+                  color: '#ffffff',
+                  marginBottom: '1.25rem'
+                }}
+              >
+                Two Specialized Tracks. One Unified Experience.
+              </h1>
+
+              <p 
+                style={{
+                  fontSize: 'clamp(1.05rem, 1.25vw + 0.5rem, 1.25rem)',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.65,
+                  margin: 0
+                }}
+              >
+                ELOQVENT 2K26 provides two complementary participant experiences: <strong>ELOCUTION</strong> develops the ability to communicate and defend ideas under rigorous adjudication, while <strong>INNOVEX</strong> empowers delegates to discover, design, develop, and present human-centred solutions to real-world challenges.
+              </p>
+            </div>
+          </ScrollReveal>
         </Container>
       </section>
 

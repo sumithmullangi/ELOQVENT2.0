@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 import { Badge } from '../common/Badge';
+import { BackgroundParticles } from '../3d/BackgroundParticles';
+import { ScrollReveal } from '../3d/ScrollReveal';
 
 interface PageHeaderProps {
   badge?: string;
@@ -31,6 +33,8 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         overflow: 'hidden'
       }}
     >
+      {/* Ambient Floating Particles */}
+      <BackgroundParticles particleCount={20} speedMultiplier={0.25} />
       {/* Subtle Background Glow */}
       <div 
         style={{
@@ -51,51 +55,53 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        {/* Breadcrumb */}
-        <div 
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            fontSize: '0.8125rem',
-            color: 'var(--text-muted)',
-            marginBottom: '1.25rem'
-          }}
-        >
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--text-secondary)' }}>
-            <Home size={14} /> Home
-          </Link>
-          <ChevronRight size={14} />
-          <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
-            {breadcrumb || title}
-          </span>
-        </div>
-
-        {/* Badge */}
-        {badge && (
-          <div style={{ marginBottom: '0.75rem' }}>
-            <Badge variant={badgeVariant}>{badge}</Badge>
+        <ScrollReveal animation="fade-up" duration={500}>
+          {/* Breadcrumb */}
+          <div 
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontSize: '0.8125rem',
+              color: 'var(--text-muted)',
+              marginBottom: '1.25rem'
+            }}
+          >
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--text-secondary)' }}>
+              <Home size={14} /> Home
+            </Link>
+            <ChevronRight size={14} />
+            <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
+              {breadcrumb || title}
+            </span>
           </div>
-        )}
 
-        {/* Title & Subtitle */}
-        <div style={{ maxWidth: '850px' }}>
-          <h1 style={{ marginBottom: '1rem' }}>
-            {title}
-          </h1>
-          {subtitle && (
-            <p style={{ fontSize: '1.125rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-              {subtitle}
-            </p>
+          {/* Badge */}
+          {badge && (
+            <div style={{ marginBottom: '0.75rem' }}>
+              <Badge variant={badgeVariant}>{badge}</Badge>
+            </div>
           )}
-        </div>
 
-        {/* Optional Children / Controls */}
-        {children && (
-          <div style={{ marginTop: '1.75rem' }}>
-            {children}
+          {/* Title & Subtitle */}
+          <div style={{ maxWidth: '850px' }}>
+            <h1 style={{ marginBottom: '1rem' }}>
+              {title}
+            </h1>
+            {subtitle && (
+              <p style={{ fontSize: '1.125rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                {subtitle}
+              </p>
+            )}
           </div>
-        )}
+
+          {/* Optional Children / Controls */}
+          {children && (
+            <div style={{ marginTop: '1.75rem' }}>
+              {children}
+            </div>
+          )}
+        </ScrollReveal>
       </div>
     </section>
   );

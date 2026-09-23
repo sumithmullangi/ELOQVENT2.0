@@ -1,10 +1,11 @@
 import React from 'react';
-import { ArrowRight, Calendar, MapPin, Mic, Lightbulb, Sparkles, Layers } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Placeholder } from '../ui/Placeholder';
-import { Eyebrow } from '../ui/Eyebrow';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, MapPin, Sparkles, Compass } from 'lucide-react';
 import { Container } from '../ui/Container';
 import { EVENT_METADATA } from '../../data/eventData';
+import { Hero3DCanvas } from '../3d/Hero3DCanvas';
+import { TiltCard } from '../3d/TiltCard';
+import { CinematicAtmosphere } from '../3d/CinematicAtmosphere';
 
 export const Hero: React.FC = () => {
   return (
@@ -13,346 +14,312 @@ export const Hero: React.FC = () => {
       className="hero-section"
       style={{
         position: 'relative',
-        paddingTop: 'clamp(3rem, 6vw + 1rem, 5.5rem)',
-        paddingBottom: 'clamp(3.5rem, 6vw + 1.5rem, 6rem)',
+        minHeight: 'calc(100vh - var(--nav-height))',
+        display: 'flex',
+        alignItems: 'center',
+        paddingTop: 'clamp(3rem, 7vh, 5.5rem)',
+        paddingBottom: 'clamp(3.5rem, 8vh, 6.5rem)',
         borderBottom: '1px solid var(--border-subtle)',
-        background: 'radial-gradient(ellipse 70% 50% at 50% -10%, rgba(56, 189, 248, 0.08) 0%, rgba(16, 185, 129, 0.05) 50%, transparent 80%)',
+        backgroundColor: '#050816',
         overflow: 'hidden'
       }}
     >
-      <Container size="lg">
+      {/* 1. Cinematic Atmospheric Background: Volumetric Light & Subtle Noise */}
+      <CinematicAtmosphere />
+
+      {/* 2. Interactive 3D Canvas Object & Particle Constellation */}
+      <Hero3DCanvas />
+
+      {/* Atmospheric Lighting Layers & Low-Opacity Tech Grid */}
+      <div 
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      >
+        {/* Large blurred cyan/blue glow top-center */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: '-15%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 'clamp(400px, 60vw, 850px)',
+            height: 'clamp(350px, 45vw, 650px)',
+            background: 'radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, rgba(37, 99, 235, 0.08) 45%, transparent 70%)',
+            filter: 'blur(70px)',
+            borderRadius: '50%'
+          }}
+        />
+
+        {/* Soft violet atmospheric glow right */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: '30%',
+            right: '-5%',
+            width: 'clamp(300px, 40vw, 550px)',
+            height: 'clamp(300px, 40vw, 550px)',
+            background: 'radial-gradient(circle, rgba(168, 85, 247, 0.14) 0%, rgba(129, 140, 248, 0.05) 50%, transparent 70%)',
+            filter: 'blur(80px)',
+            borderRadius: '50%'
+          }}
+        />
+
+        {/* Emerald accent glow lower-left */}
+        <div 
+          style={{
+            position: 'absolute',
+            bottom: '-10%',
+            left: '5%',
+            width: 'clamp(250px, 35vw, 450px)',
+            height: 'clamp(250px, 35vw, 450px)',
+            background: 'radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 65%)',
+            filter: 'blur(80px)',
+            borderRadius: '50%'
+          }}
+        />
+
+        {/* Low-opacity subtle tech grid overlay */}
+        <div 
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: `
+              linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px)
+            `,
+            backgroundSize: '48px 48px',
+            maskImage: 'radial-gradient(ellipse 70% 65% at 50% 45%, #000 30%, transparent 85%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 65% at 50% 45%, #000 30%, transparent 85%)',
+            opacity: 0.6
+          }}
+        />
+      </div>
+
+      <Container size="lg" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
         <div 
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '2.5rem'
+            alignItems: 'center',
+            textAlign: 'center',
+            gap: 'clamp(1.5rem, 3vw, 2.25rem)',
+            maxWidth: '1020px',
+            margin: '0 auto'
           }}
         >
-          {/* Top Metadata Strip: Eyebrow + Date & Venue Placeholders */}
+          {/* Badge: National Collegiate Symposium 2K26 */}
           <div 
             className="hero-anim-1"
             style={{
-              display: 'flex',
-              flexWrap: 'wrap',
+              display: 'inline-flex',
               alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '1rem',
-              paddingBottom: '1.25rem',
-              borderBottom: '1px solid var(--border-subtle)'
+              gap: '0.625rem',
+              padding: '0.35rem 1rem',
+              borderRadius: 'var(--radius-pill)',
+              background: 'rgba(10, 16, 36, 0.75)',
+              border: '1px solid rgba(56, 189, 248, 0.3)',
+              boxShadow: '0 0 20px rgba(56, 189, 248, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)'
             }}
           >
-            <Eyebrow variant="neutral" icon={<Sparkles size={13} color="var(--elocution-accent)" />}>
-              National Collegiate Symposium 2K26
-            </Eyebrow>
-
-            <div 
+            <span className="live-dot-cyan" aria-hidden="true" />
+            <span 
               style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                gap: '1.25rem',
-                fontSize: '0.85rem'
+                fontFamily: 'var(--font-mono)',
+                fontSize: 'clamp(0.6875rem, 1.2vw, 0.775rem)',
+                fontWeight: 600,
+                letterSpacing: '0.08em',
+                color: '#e0f2fe',
+                textTransform: 'uppercase'
               }}
             >
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
-                <Calendar size={15} color="var(--elocution-accent)" aria-hidden="true" style={{ flexShrink: 0 }} />
-                <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>Date:</span>
-                <Placeholder label={EVENT_METADATA.date} />
-              </div>
-
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
-                <MapPin size={15} color="var(--innovex-accent)" aria-hidden="true" style={{ flexShrink: 0 }} />
-                <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>Venue:</span>
-                <Placeholder label={EVENT_METADATA.venue} />
-              </div>
-            </div>
+              National Collegiate Symposium 2K26
+            </span>
           </div>
 
-          {/* Main Hero Editorial Headline Block */}
-          <div className="hero-anim-2" style={{ maxWidth: '980px' }}>
-            {/* The ONLY H1 on the homepage */}
+          {/* Dominant Headline: ELOQVENT 2K26 */}
+          <div style={{ width: '100%' }}>
             <h1 
+              className="hero-anim-2"
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2.75rem, 6.5vw + 1rem, 5.5rem)',
+                fontSize: 'clamp(3.25rem, 8.5vw + 0.5rem, 6.75rem)',
                 fontWeight: 800,
                 letterSpacing: '-0.04em',
-                lineHeight: 1.02,
+                lineHeight: 0.98,
                 color: '#ffffff',
-                marginBottom: '1rem'
+                margin: '0 0 0.75rem 0',
+                textTransform: 'uppercase',
+                textShadow: '0 0 45px rgba(56, 189, 248, 0.25)'
               }}
             >
-              ELOQVENT 2K26
+              ELOQVENT{' '}
+              <span 
+                style={{
+                  background: 'linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #a855f7 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  filter: 'drop-shadow(0 0 25px rgba(56, 189, 248, 0.35))',
+                  display: 'inline-block'
+                }}
+              >
+                2K26
+              </span>
             </h1>
 
-            {/* Supporting Tagline */}
+            {/* Subtitle */}
             <div 
+              className="hero-anim-3"
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.5rem, 3.2vw + 0.5rem, 2.5rem)',
+                fontSize: 'clamp(1.25rem, 2.75vw + 0.25rem, 2.25rem)',
                 fontWeight: 700,
-                letterSpacing: '-0.03em',
+                letterSpacing: '-0.025em',
                 lineHeight: 1.2,
-                background: 'linear-gradient(135deg, #ffffff 20%, #94a3b8 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                marginBottom: '1.25rem'
+                color: '#cbd5e1',
+                marginTop: '0.5rem'
               }}
             >
               Two Tracks. One Experience.
             </div>
-
-            {/* Supporting Copy (strictly PRD-derived, 1-2 sentences) */}
-            <p 
-              style={{
-                fontSize: 'clamp(1.05rem, 1.25vw + 0.5rem, 1.25rem)',
-                color: 'var(--text-secondary)',
-                lineHeight: 1.65,
-                maxWidth: '780px',
-                margin: 0
-              }}
-            >
-              A premier collegiate platform uniting oratorical eloquence with human-centred venture design. 
-              Empowering students to articulate transformative ideas, deconstruct systemic challenges, and engineer sustainable solutions for real-world impact.
-            </p>
           </div>
 
-          {/* Track Relationship: ELOCUTION + INNOVEX as complementary parts */}
-          <div 
-            className="hero-anim-3"
+          {/* Controlled Max-Width Description */}
+          <p 
+            className="hero-anim-4"
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '1.5rem',
-              alignItems: 'stretch'
+              fontSize: 'clamp(1rem, 1.3vw + 0.2rem, 1.1875rem)',
+              color: 'var(--text-secondary)',
+              lineHeight: 1.7,
+              maxWidth: '740px',
+              margin: '0 auto',
+              fontWeight: 400
             }}
           >
-            {/* ELOCUTION Track Relationship Card */}
-            <div 
-              className="surface-card"
-              style={{
-                background: 'linear-gradient(180deg, rgba(13, 22, 38, 0.75) 0%, rgba(8, 12, 20, 0.9) 100%)',
-                border: '1px solid var(--border-subtle)',
-                borderLeft: '3px solid var(--elocution-accent)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative'
-              }}
-            >
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                  <span 
-                    style={{
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: '0.725rem',
-                      fontWeight: 700,
-                      color: 'var(--elocution-accent)',
-                      background: 'rgba(56, 189, 248, 0.12)',
-                      padding: '0.2rem 0.6rem',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--elocution-border)',
-                      letterSpacing: '0.06em'
-                    }}
-                  >
-                    TRACK 01
-                  </span>
-
-                  <span className="mono-tag" style={{ color: 'var(--text-muted)', fontSize: '0.725rem' }}>
-                    Individual Entry
-                  </span>
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-                  <div 
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '8px',
-                      background: 'rgba(56, 189, 248, 0.15)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0
-                    }}
-                  >
-                    <Mic size={20} color="var(--elocution-accent)" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h2 
-                      style={{ 
-                        fontSize: '1.35rem', 
-                        color: '#ffffff', 
-                        fontWeight: 700, 
-                        margin: 0,
-                        letterSpacing: '-0.02em'
-                      }}
-                    >
-                      ELOCUTION
-                    </h2>
-                    <div style={{ fontSize: '0.875rem', color: 'var(--elocution-accent)', fontWeight: 600 }}>
-                      Communication & Expression
-                    </div>
-                  </div>
-                </div>
-
-                <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, marginTop: '0.75rem', marginBottom: '1rem' }}>
-                  Public speaking, spontaneous articulation, critical dialectics, debate rebuttal agility, and persuasive storytelling.
-                </p>
-              </div>
-
-              <div 
-                style={{
-                  paddingTop: '0.75rem',
-                  borderTop: '1px solid var(--border-subtle)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  fontSize: '0.8125rem',
-                  color: 'var(--text-muted)',
-                  fontFamily: 'var(--font-mono)'
-                }}
-              >
-                <span>6 Progressing Phases</span>
-                <span style={{ color: 'var(--elocution-accent)' }}>Track 01 of 02</span>
-              </div>
-            </div>
-
-            {/* INNOVEX Track Relationship Card */}
-            <div 
-              className="surface-card"
-              style={{
-                background: 'linear-gradient(180deg, rgba(8, 28, 20, 0.75) 0%, rgba(8, 12, 20, 0.9) 100%)',
-                border: '1px solid var(--border-subtle)',
-                borderLeft: '3px solid var(--innovex-accent)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative'
-              }}
-            >
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                  <span 
-                    style={{
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: '0.725rem',
-                      fontWeight: 700,
-                      color: 'var(--innovex-accent)',
-                      background: 'rgba(16, 185, 129, 0.12)',
-                      padding: '0.2rem 0.6rem',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--innovex-border)',
-                      letterSpacing: '0.06em'
-                    }}
-                  >
-                    TRACK 02
-                  </span>
-
-                  <span className="mono-tag" style={{ color: 'var(--text-muted)', fontSize: '0.725rem' }}>
-                    Team / Individual Entry
-                  </span>
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-                  <div 
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '8px',
-                      background: 'rgba(16, 185, 129, 0.15)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0
-                    }}
-                  >
-                    <Lightbulb size={20} color="var(--innovex-accent)" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h2 
-                      style={{ 
-                        fontSize: '1.35rem', 
-                        color: '#ffffff', 
-                        fontWeight: 700, 
-                        margin: 0,
-                        letterSpacing: '-0.02em'
-                      }}
-                    >
-                      INNOVEX
-                    </h2>
-                    <div style={{ fontSize: '0.875rem', color: 'var(--innovex-accent)', fontWeight: 600 }}>
-                      Human-Centred Innovation & Social Impact
-                    </div>
-                  </div>
-                </div>
-
-                <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.55, marginTop: '0.75rem', marginBottom: '1rem' }}>
-                  Human-centred design, root-cause analysis, frugal prototyping, sustainable business modelling, and venture pitching.
-                </p>
-              </div>
-
-              <div 
-                style={{
-                  paddingTop: '0.75rem',
-                  borderTop: '1px solid var(--border-subtle)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  fontSize: '0.8125rem',
-                  color: 'var(--text-muted)',
-                  fontFamily: 'var(--font-mono)'
-                }}
-              >
-                <span>7 Milestone Steps</span>
-                <span style={{ color: 'var(--innovex-accent)' }}>Track 02 of 02</span>
-              </div>
-            </div>
-          </div>
+            A premier collegiate platform uniting oratorical eloquence with human-centred venture design. 
+            Empowering students to articulate transformative ideas, deconstruct systemic challenges, and engineer sustainable solutions for real-world impact.
+          </p>
 
           {/* Action CTAs */}
           <div 
-            className="hero-anim-4"
+            className="hero-anim-5"
             style={{
               display: 'flex',
               flexWrap: 'wrap',
               alignItems: 'center',
-              gap: '1rem'
+              justifyContent: 'center',
+              gap: '1rem',
+              marginTop: '0.5rem',
+              width: '100%'
             }}
           >
-            {/* Primary CTA */}
-            <Button 
+            {/* Primary CTA: REGISTER NOW */}
+            <Link 
               to="/register" 
-              variant="primary" 
-              size="lg" 
-              icon={<ArrowRight size={18} aria-hidden="true" />}
+              className="btn-hero-primary focus-visible-ring"
               style={{
-                minWidth: '200px'
+                padding: '0.875rem 2.25rem',
+                fontSize: '1rem',
+                minWidth: '210px'
               }}
             >
-              REGISTER NOW
-            </Button>
+              <span>REGISTER NOW</span>
+              <ArrowRight size={18} aria-hidden="true" />
+            </Link>
 
-            {/* Secondary CTA */}
-            <Button 
-              to="/tracks" 
-              variant="secondary" 
-              size="lg"
+            {/* Secondary CTA: EXPLORE TRACKS */}
+            <a 
+              href="#tracks" 
+              className="btn-hero-secondary focus-visible-ring"
+              style={{
+                padding: '0.875rem 2rem',
+                fontSize: '1rem',
+                minWidth: '190px'
+              }}
             >
-              EXPLORE THE EVENT
-            </Button>
+              <Compass size={18} color="var(--elocution-accent)" aria-hidden="true" />
+              <span>EXPLORE TRACKS</span>
+            </a>
+          </div>
+
+          {/* Event Information: Two Compact 3D Interactive Glass Cards */}
+          <div 
+            className="hero-anim-6"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '1.25rem',
+              marginTop: '1.25rem',
+              width: '100%'
+            }}
+          >
+            {/* Date Pill Card with 3D Tilt */}
+            <TiltCard maxTilt={6} scale={1.03}>
+              <div 
+                className="glass-pill"
+                style={{
+                  border: '1px solid rgba(56, 189, 248, 0.3)',
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.45), 0 0 15px rgba(56, 189, 248, 0.15)'
+                }}
+              >
+                <Calendar size={16} color="var(--elocution-accent)" aria-hidden="true" style={{ flexShrink: 0 }} />
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', fontWeight: 500 }}>DATE:</span>
+                <span 
+                  style={{ 
+                    fontFamily: 'var(--font-mono)', 
+                    fontSize: '0.8125rem', 
+                    fontWeight: 600, 
+                    color: '#f8fafc',
+                    letterSpacing: '0.04em'
+                  }}
+                >
+                  {EVENT_METADATA.date}
+                </span>
+              </div>
+            </TiltCard>
+
+            {/* Venue Pill Card with 3D Tilt */}
+            <TiltCard maxTilt={6} scale={1.03}>
+              <div 
+                className="glass-pill"
+                style={{
+                  border: '1px solid rgba(168, 85, 247, 0.3)',
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.45), 0 0 15px rgba(168, 85, 247, 0.15)'
+                }}
+              >
+                <MapPin size={16} color="var(--violet-accent)" aria-hidden="true" style={{ flexShrink: 0 }} />
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', fontWeight: 500 }}>VENUE:</span>
+                <span 
+                  style={{ 
+                    fontFamily: 'var(--font-mono)', 
+                    fontSize: '0.8125rem', 
+                    fontWeight: 600, 
+                    color: '#f8fafc',
+                    letterSpacing: '0.04em'
+                  }}
+                >
+                  {EVENT_METADATA.venue}
+                </span>
+              </div>
+            </TiltCard>
           </div>
         </div>
       </Container>
 
-      {/* Scoped Keyframes & Reduced-Motion CSS */}
+      {/* Scoped Keyframes & Smooth Motion */}
       <style>{`
-        @keyframes heroFadeUp {
+        @keyframes heroFadeInUp {
           from {
             opacity: 0;
-            transform: translateY(12px);
+            transform: translateY(16px);
           }
           to {
             opacity: 1;
@@ -361,26 +328,36 @@ export const Hero: React.FC = () => {
         }
 
         .hero-anim-1 {
-          animation: heroFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+          animation: heroFadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
         }
 
         .hero-anim-2 {
-          animation: heroFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+          animation: heroFadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
         }
 
         .hero-anim-3 {
-          animation: heroFadeUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+          animation: heroFadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
         }
 
         .hero-anim-4 {
-          animation: heroFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+          animation: heroFadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+        }
+
+        .hero-anim-5 {
+          animation: heroFadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.40s both;
+        }
+
+        .hero-anim-6 {
+          animation: heroFadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
         }
 
         @media (prefers-reduced-motion: reduce) {
           .hero-anim-1,
           .hero-anim-2,
           .hero-anim-3,
-          .hero-anim-4 {
+          .hero-anim-4,
+          .hero-anim-5,
+          .hero-anim-6 {
             animation: none !important;
             opacity: 1 !important;
             transform: none !important;
@@ -390,3 +367,4 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+

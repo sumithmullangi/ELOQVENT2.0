@@ -30,6 +30,9 @@ import { CTASection } from '../components/sections/CTASection';
 import { INNOVEX_PROCESS_STAGES, WHAT_PARTICIPANTS_DEVELOP } from '../data/innovexProcess';
 import { INNOVEX_JOURNEY_STEPS } from '../data/innovexJourney';
 import { EVALUATION_INNOVEX } from '../data/eventData';
+import { TiltCard } from '../components/3d/TiltCard';
+import { ScrollReveal } from '../components/3d/ScrollReveal';
+import { BackgroundParticles } from '../components/3d/BackgroundParticles';
 
 export const InnovexPage: React.FC = () => {
   useEffect(() => {
@@ -50,7 +53,9 @@ export const InnovexPage: React.FC = () => {
           overflow: 'hidden'
         }}
       >
-        <Container size="lg">
+        <BackgroundParticles particleCount={25} speedMultiplier={0.25} />
+        <Container size="lg" style={{ position: 'relative', zIndex: 1 }}>
+          <ScrollReveal animation="fade-up" duration={600}>
           {/* Breadcrumb Navigation */}
           <nav 
             aria-label="Breadcrumb"
@@ -129,6 +134,7 @@ export const InnovexPage: React.FC = () => {
               </Button>
             </div>
           </div>
+          </ScrollReveal>
         </Container>
       </section>
 
