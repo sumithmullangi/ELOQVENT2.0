@@ -1,0 +1,35 @@
+{
+  "registrations": [
+    {
+      "id": "reg_delegate_001",
+      "referenceId": "ELQ-2026-H09SY",
+      "track": "elocution",
+      "participantType": "team",
+      "teamName": "Team Catalyst",
+      "primaryParticipant": {
+        "fullName": "sumith",
+        "email": "sumithmullangi@gmail.com",
+        "phone": "+91 9876543210",
+        "college": "Engineering & Technology Institute",
+        "degree": "B.Tech / B.E.",
+        "yearOfStudy": "3rd Year",
+        "studentId": "ID-2026-042"
+      },
+      "teamMembers": [],
+      "selectedTheme": "Elocution & Rhetorical Expression",
+      "problemStatementIdea": "Speech & Innovation Discourse",
+      "howDidYouHear": "College Portal",
+      "createdAt": "2026-09-18T18:22:00.000Z"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq_1789756013041",
+      "name": "Faculty Coordinator",
+      "email": "faculty@institution.edu",
+      "category": "Faculty Delegation & Group Pass",
+      "message": "Inquiring regarding bringing student delegates to Innovex track.",
+      "createdAt": "2026-09-18T18:26:53.042Z"
+    }
+  ]
+}
