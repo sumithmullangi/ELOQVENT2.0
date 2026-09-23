@@ -5,12 +5,12 @@ import { SectionHeading } from '../common/SectionHeading';
 
 export const KeyStats: React.FC = () => {
   const iconMap: Record<string, { icon: React.ReactNode; color: string; border: string }> = {
-    MessageSquare: { icon: <MessageSquare size={22} color="var(--elocution-accent)" />, color: 'var(--elocution-accent)', border: 'rgba(56, 189, 248, 0.3)' },
-    Lightbulb: { icon: <Lightbulb size={22} color="var(--innovex-accent)" />, color: 'var(--innovex-accent)', border: 'rgba(16, 185, 129, 0.3)' },
-    Users: { icon: <Users size={22} color="#38bdf8" />, color: '#38bdf8', border: 'rgba(56, 189, 248, 0.3)' },
-    Globe: { icon: <Globe size={22} color="#10b981" />, color: '#10b981', border: 'rgba(16, 185, 129, 0.3)' },
-    TrendingUp: { icon: <TrendingUp size={22} color="#a855f7" />, color: '#a855f7', border: 'rgba(168, 85, 247, 0.3)' },
-    Leaf: { icon: <Leaf size={22} color="#34d399" />, color: '#34d399', border: 'rgba(52, 211, 153, 0.3)' }
+    MessageSquare: { icon: <MessageSquare size={22} color="var(--pro-blue)" />, color: 'var(--pro-blue)', border: 'rgba(41, 151, 255, 0.35)' },
+    Lightbulb: { icon: <Lightbulb size={22} color="var(--desert-titanium)" />, color: 'var(--desert-titanium)', border: 'rgba(212, 178, 140, 0.35)' },
+    Users: { icon: <Users size={22} color="#f5f5f7" />, color: '#f5f5f7', border: 'rgba(255, 255, 255, 0.25)' },
+    Globe: { icon: <Globe size={22} color="var(--desert-titanium)" />, color: 'var(--desert-titanium)', border: 'rgba(212, 178, 140, 0.35)' },
+    TrendingUp: { icon: <TrendingUp size={22} color="var(--natural-titanium)" />, color: 'var(--natural-titanium)', border: 'rgba(185, 180, 173, 0.35)' },
+    Leaf: { icon: <Leaf size={22} color="var(--desert-titanium)" />, color: 'var(--desert-titanium)', border: 'rgba(212, 178, 140, 0.35)' }
   };
 
   return (
@@ -31,13 +31,13 @@ export const KeyStats: React.FC = () => {
           }}
         >
           {CORE_PILLARS.map((pillar, index) => {
-            const meta = iconMap[pillar.icon] || { icon: <Sparkles size={22} color="#38bdf8" />, color: '#38bdf8', border: 'var(--border-subtle)' };
+            const meta = iconMap[pillar.icon] || { icon: <Sparkles size={22} color="var(--pro-blue)" />, color: 'var(--pro-blue)', border: 'var(--border-subtle)' };
             return (
               <div
                 key={pillar.title}
                 className="glass-card"
                 style={{
-                  background: 'linear-gradient(180deg, rgba(13, 19, 31, 0.7) 0%, rgba(7, 10, 16, 0.85) 100%)',
+                  background: 'linear-gradient(180deg, rgba(22, 22, 24, 0.72) 0%, rgba(12, 12, 14, 0.88) 100%)',
                   border: '1px solid var(--border-subtle)',
                   borderRadius: 'var(--radius-lg)',
                   padding: '2rem 1.75rem',

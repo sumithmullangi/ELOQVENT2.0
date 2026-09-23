@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
     <footer
       role="contentinfo"
       style={{
-        backgroundColor: '#04070c',
+        backgroundColor: '#000000',
         borderTop: '1px solid var(--border-subtle)',
         paddingTop: '4rem',
         paddingBottom: '2.5rem',
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
         {/* Footer Top Callout Banner */}
         <div
           style={{
-            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%)',
+            background: 'linear-gradient(135deg, rgba(41, 151, 255, 0.08) 0%, rgba(212, 178, 140, 0.08) 100%)',
             border: '1px solid var(--border-medium)',
             borderRadius: 'var(--radius-xl)',
             padding: '2rem 2.5rem',
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.75rem',
-                color: 'var(--elocution-accent)',
+                color: 'var(--desert-titanium)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
                 marginBottom: '0.5rem',
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
                 fontFamily: 'var(--font-display)',
                 fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)',
                 fontWeight: 800,
-                color: '#ffffff',
+                color: '#f5f5f7',
                 marginBottom: '0.5rem',
                 lineHeight: 1.2
               }}
@@ -100,16 +100,16 @@ export const Footer: React.FC = () => {
                   width: '32px',
                   height: '32px',
                   borderRadius: '6px',
-                  background: 'linear-gradient(135deg, #38bdf8 0%, #10b981 100%)',
+                  background: 'linear-gradient(135deg, #d4b28c 0%, #2997ff 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0
                 }}
               >
-                <Sparkles size={18} color="#070a10" aria-hidden="true" />
+                <Sparkles size={18} color="#000000" aria-hidden="true" />
               </div>
-              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 800, color: '#ffffff' }}>
+              <span style={{ fontFamily: 'var(--font-lining)', fontSize: '1.05rem', fontWeight: 700, letterSpacing: '0.06em', color: '#f5f5f7' }}>
                 ELOQVENT 2K26
               </span>
             </Link>
@@ -117,13 +117,13 @@ export const Footer: React.FC = () => {
               The national platform bridging rhetorical mastery and human-centred technological innovation for sustainable societal impact.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              <span style={{ fontSize: '0.725rem', fontFamily: 'var(--font-mono)', color: 'var(--elocution-accent)', background: 'rgba(56,189,248,0.1)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid rgba(56,189,248,0.2)' }}>
+              <span style={{ fontSize: '0.725rem', fontFamily: 'var(--font-mono)', color: 'var(--elocution-accent)', background: 'rgba(41,151,255,0.1)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid rgba(41,151,255,0.25)' }}>
                 Elocution
               </span>
-              <span style={{ fontSize: '0.725rem', fontFamily: 'var(--font-mono)', color: 'var(--innovex-accent)', background: 'rgba(16,185,129,0.1)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid rgba(16,185,129,0.2)' }}>
+              <span style={{ fontSize: '0.725rem', fontFamily: 'var(--font-mono)', color: 'var(--innovex-accent)', background: 'rgba(212,178,140,0.1)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid rgba(212,178,140,0.25)' }}>
                 Innovex
               </span>
-              <span style={{ fontSize: '0.725rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-purple)', background: 'rgba(168,85,247,0.1)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid rgba(168,85,247,0.2)' }}>
+              <span style={{ fontSize: '0.725rem', fontFamily: 'var(--font-mono)', color: 'var(--natural-titanium)', background: 'rgba(185,180,173,0.1)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid rgba(185,180,173,0.25)' }}>
                 Social Impact
               </span>
             </div>

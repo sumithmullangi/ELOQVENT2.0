@@ -40,10 +40,10 @@ export const BackgroundParticles: React.FC<BackgroundParticlesProps> = ({
     let height = (canvas.height = canvas.parentElement?.clientHeight || window.innerHeight);
 
     const colors = [
-      'rgba(56, 189, 248, ',  // Cyan
-      'rgba(168, 85, 247, ', // Violet
-      'rgba(16, 185, 129, ', // Emerald
-      'rgba(99, 102, 241, '  // Indigo
+      'rgba(41, 151, 255, ',   // Apple Pro Electric Blue
+      'rgba(212, 178, 140, ',  // Desert Titanium Warm Bronze
+      'rgba(185, 180, 173, ',  // Natural Titanium Silver
+      'rgba(245, 245, 247, '   // White Titanium Platinum
     ];
 
     const particles: Particle[] = [];

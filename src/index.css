@@ -1,62 +1,89 @@
 /* ==========================================================================
    ELOQVENT 2K26 — Design System & Global Styles
-   Modern, Editorial, High-Contrast, Social Innovation & Communication
+   Apple iPhone Pro Aesthetic: Titanium Metallic Finishes, Deep OLED Black,
+   Refined Silver Typography & High-Precision Glassmorphism
    ========================================================================== */
 
 :root {
-  /* Color Palette - Canvas & Surfaces (Deep Navy / Black Base) */
-  --bg-canvas: #050816;
-  --bg-surface-1: #07101F;
-  --bg-surface-2: #0A1024;
-  --bg-surface-3: #111B38;
-  --bg-glass: rgba(7, 16, 31, 0.75);
-  --bg-glass-heavy: rgba(5, 8, 22, 0.85);
+  /* Apple iPhone Pro Palette — Deep Obsidian & Canvas Surfaces */
+  --bg-canvas: #000000;
+  --bg-surface-1: #0d0d0f;
+  --bg-surface-2: #161618;
+  --bg-surface-3: #222225;
+  --bg-glass: rgba(22, 22, 24, 0.75);
+  --bg-glass-heavy: rgba(10, 10, 12, 0.90);
 
-  /* Borders */
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-medium: rgba(255, 255, 255, 0.14);
-  --border-bright: rgba(255, 255, 255, 0.28);
-  --border-cyan-glow: rgba(56, 189, 248, 0.3);
-  --border-violet-glow: rgba(168, 85, 247, 0.3);
+  /* Apple Pro Titanium Borders & Edges */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-bright: rgba(255, 255, 255, 0.32);
+  --border-titanium-desert: rgba(212, 178, 140, 0.35);
+  --border-titanium-natural: rgba(185, 180, 173, 0.30);
+  --border-pro-blue: rgba(41, 151, 255, 0.35);
+  --border-cyan-glow: rgba(41, 151, 255, 0.3);
+  --border-violet-glow: rgba(175, 82, 222, 0.3);
 
-  /* Typography */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-inverse: #050816;
+  /* Apple Pro Typography Hierarchy */
+  --text-primary: #f5f5f7;
+  --text-secondary: #86868b;
+  --text-muted: #6e6e73;
+  --text-inverse: #000000;
 
-  /* Atmospheric Accents */
-  --cyan-accent: #38bdf8;
-  --cyan-glow: rgba(56, 189, 248, 0.25);
-  --violet-accent: #a855f7;
-  --violet-glow: rgba(168, 85, 247, 0.25);
-  --blue-accent: #3b82f6;
+  /* Apple Pro Titanium Metallic Finishes */
+  --desert-titanium: #d4b28c;
+  --desert-titanium-hover: #e8cbb0;
+  --desert-titanium-dark: #a8805a;
+  --desert-titanium-gradient: linear-gradient(135deg, #f5d7b5 0%, #d4b28c 45%, #9b7244 100%);
+  --desert-titanium-glow: rgba(212, 178, 140, 0.25);
 
-  /* Elocution Theme (Electric Cyan & Royal Azure) */
-  --elocution-accent: #38bdf8;
-  --elocution-accent-hover: #7dd3fc;
-  --elocution-gradient: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
-  --elocution-glow: rgba(56, 189, 248, 0.2);
-  --elocution-border: rgba(56, 189, 248, 0.35);
+  --natural-titanium: #b9b4ad;
+  --natural-titanium-hover: #d9d5ce;
+  --natural-titanium-dark: #7c7770;
+  --natural-titanium-gradient: linear-gradient(135deg, #f0eee9 0%, #b9b4ad 50%, #706b64 100%);
+  --natural-titanium-glow: rgba(185, 180, 173, 0.22);
 
-  /* Innovex Theme (Cyber Emerald & Mint) */
-  --innovex-accent: #10b981;
-  --innovex-accent-hover: #34d399;
-  --innovex-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  --innovex-glow: rgba(16, 185, 129, 0.2);
-  --innovex-border: rgba(16, 185, 129, 0.35);
+  --white-titanium: #f5f5f7;
+  --black-titanium: #1d1d1f;
 
-  /* Neutral / Status */
-  --accent-amber: #f59e0b;
-  --amber-bg: rgba(245, 158, 11, 0.12);
-  --amber-border: rgba(245, 158, 11, 0.3);
-  --accent-purple: #a855f7;
-  --accent-rose: #f43f5e;
+  /* Apple Pro Electric Blue & Atmospheric Accents */
+  --pro-blue: #2997ff;
+  --pro-blue-hover: #5ac8fa;
+  --pro-blue-gradient: linear-gradient(135deg, #5ac8fa 0%, #2997ff 60%, #0071e3 100%);
+  --pro-blue-glow: rgba(41, 151, 255, 0.25);
+
+  --cyan-accent: #2997ff;
+  --cyan-glow: rgba(41, 151, 255, 0.25);
+  --violet-accent: #af52de;
+  --violet-glow: rgba(175, 82, 222, 0.25);
+  --blue-accent: #0071e3;
+
+  /* Elocution Theme (Apple Pro Blue & Natural Titanium) */
+  --elocution-accent: #2997ff;
+  --elocution-accent-hover: #5ac8fa;
+  --elocution-gradient: linear-gradient(135deg, #5ac8fa 0%, #2997ff 60%, #0071e3 100%);
+  --elocution-glow: rgba(41, 151, 255, 0.25);
+  --elocution-border: rgba(41, 151, 255, 0.35);
+
+  /* Innovex Theme (Apple Desert Titanium & Warm Amber Gold) */
+  --innovex-accent: #d4b28c;
+  --innovex-accent-hover: #e8cbb0;
+  --innovex-gradient: linear-gradient(135deg, #f5d7b5 0%, #d4b28c 45%, #9b7244 100%);
+  --innovex-glow: rgba(212, 178, 140, 0.25);
+  --innovex-border: rgba(212, 178, 140, 0.35);
+
+  /* Apple Neutral & System Status */
+  --accent-amber: #d4b28c;
+  --amber-bg: rgba(212, 178, 140, 0.12);
+  --amber-border: rgba(212, 178, 140, 0.35);
+  --accent-purple: #af52de;
+  --accent-rose: #ff453a;
+  --accent-green: #30d158;
 
   /* Typography Stack */
-  --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-lining: 'Syncopate', 'Tourney', 'Orbitron', 'Syne', sans-serif;
+  --font-display: 'Syncopate', 'Syne', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Text', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
 
   /* Spacing System */
   --space-1: 0.25rem;
@@ -107,9 +134,9 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -15%, rgba(56, 189, 248, 0.12), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 90% 45%, rgba(168, 85, 247, 0.07), transparent 70%),
-    radial-gradient(ellipse 50% 35% at 10% 75%, rgba(16, 185, 129, 0.06), transparent 70%);
+    radial-gradient(ellipse 80% 50% at 50% -15%, rgba(41, 151, 255, 0.10), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 90% 45%, rgba(212, 178, 140, 0.08), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 10% 75%, rgba(185, 180, 173, 0.06), transparent 70%);
   background-attachment: fixed;
 }
 
@@ -204,6 +231,39 @@ p {
   text-transform: uppercase;
 }
 
+/* Extra Lining & Expanded Display Typography */
+.font-lining {
+  font-family: var(--font-lining);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand-heading-lining {
+  font-family: var(--font-lining);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.05;
+}
+
+.text-lining-outline {
+  font-family: var(--font-lining);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  -webkit-text-stroke: 1.5px rgba(245, 245, 247, 0.9);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-lining-shimmer {
+  font-family: var(--font-lining);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, #f5f5f7 0%, #d4b28c 50%, #2997ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Links */
 a {
   color: inherit;
@@ -238,37 +298,37 @@ a {
 .btn-primary {
   background: var(--text-primary);
   color: var(--text-inverse);
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   background: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.35);
 }
 
 .btn-elocution {
   background: var(--elocution-accent);
-  color: #04101e;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(41, 151, 255, 0.35);
 }
 
 .btn-elocution:hover {
   background: var(--elocution-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 6px 25px rgba(41, 151, 255, 0.5);
 }
 
 .btn-innovex {
   background: var(--innovex-accent);
-  color: #031c12;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+  color: #000000;
+  box-shadow: 0 4px 18px rgba(212, 178, 140, 0.35);
 }
 
 .btn-innovex:hover {
   background: var(--innovex-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 25px rgba(212, 178, 140, 0.5);
 }
 
 .btn-secondary {
@@ -347,13 +407,13 @@ a {
 }
 
 .badge-elocution {
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(41, 151, 255, 0.12);
   color: var(--elocution-accent);
   border: 1px solid var(--elocution-border);
 }
 
 .badge-innovex {
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(212, 178, 140, 0.12);
   color: var(--innovex-accent);
   border: 1px solid var(--innovex-border);
 }
@@ -399,7 +459,7 @@ a {
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
   border-color: var(--elocution-accent);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.2);
 }
 
 .form-input.error, .form-select.error, .form-textarea.error {
@@ -461,15 +521,15 @@ a {
 }
 
 @keyframes pulseRing {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 178, 140, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 178, 140, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 178, 140, 0); }
 }
 
 @keyframes pulseRingCyan {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(41, 151, 255, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(41, 151, 255, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(41, 151, 255, 0); }
 }
 
 @keyframes textShimmer {
@@ -549,9 +609,9 @@ a {
   background: linear-gradient(
     90deg, 
     #ffffff 0%, 
-    var(--elocution-accent) 25%, 
-    #a855f7 50%, 
-    var(--innovex-accent) 75%, 
+    var(--desert-titanium) 25%, 
+    #ffffff 50%, 
+    var(--pro-blue) 75%, 
     #ffffff 100%
   );
   background-size: 200% auto;
@@ -560,56 +620,59 @@ a {
   animation: textShimmer 6s linear infinite;
 }
 
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #ffffff 30%, var(--elocution-accent) 100%);
+.text-gradient-cyan,
+.text-gradient-pro-blue {
+  background: linear-gradient(135deg, #ffffff 20%, #5ac8fa 60%, var(--elocution-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-emerald {
-  background: linear-gradient(135deg, #ffffff 30%, var(--innovex-accent) 100%);
+.text-gradient-emerald,
+.text-gradient-desert {
+  background: linear-gradient(135deg, #ffffff 20%, #f5d7b5 60%, var(--innovex-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+.text-gradient-gold,
+.text-gradient-titanium {
+  background: linear-gradient(135deg, #ffffff 0%, #f0eee9 40%, #b9b4ad 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Glass & Futuristic Atmosphere */
+/* Glass & Apple Titanium Surface Atmosphere */
 .glass-panel {
-  background: rgba(7, 16, 31, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(22, 22, 24, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-xl);
 }
 
 .glass-card {
-  background: rgba(10, 16, 36, 0.65);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(18, 18, 20, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
 }
 
 .glass-card:hover {
-  background: rgba(17, 27, 56, 0.85);
+  background: rgba(28, 28, 30, 0.88);
   border-color: var(--border-bright);
   transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
 .glass-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(10, 16, 36, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(18, 18, 20, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-pill);
   padding: 0.5rem 1.15rem;
@@ -620,40 +683,46 @@ a {
 }
 
 .glass-pill:hover {
-  background: rgba(17, 27, 56, 0.85);
+  background: rgba(28, 28, 30, 0.9);
   border-color: var(--border-medium);
 }
 
-.glow-cyan-box {
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+.glow-cyan-box,
+.glow-pro-blue-box {
+  box-shadow: 0 0 30px rgba(41, 151, 255, 0.18);
 }
 
-.glow-cyan-box:hover {
-  box-shadow: 0 0 45px rgba(56, 189, 248, 0.35);
+.glow-cyan-box:hover,
+.glow-pro-blue-box:hover {
+  box-shadow: 0 0 45px rgba(41, 151, 255, 0.35);
 }
 
-.glow-emerald-box {
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+.glow-emerald-box,
+.glow-desert-box {
+  box-shadow: 0 0 30px rgba(212, 178, 140, 0.18);
 }
 
-.glow-emerald-box:hover {
-  box-shadow: 0 0 45px rgba(16, 185, 129, 0.35);
+.glow-emerald-box:hover,
+.glow-desert-box:hover {
+  box-shadow: 0 0 45px rgba(212, 178, 140, 0.35);
 }
 
 .glow-violet-box {
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.18);
+  box-shadow: 0 0 30px rgba(175, 82, 222, 0.18);
 }
 
 .glow-violet-box:hover {
-  box-shadow: 0 0 45px rgba(168, 85, 247, 0.35);
+  box-shadow: 0 0 45px rgba(175, 82, 222, 0.35);
 }
 
-.glow-gold-box {
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.18);
+.glow-gold-box,
+.glow-titanium-box {
+  box-shadow: 0 0 30px rgba(185, 180, 173, 0.18);
 }
 
-.glow-gold-box:hover {
-  box-shadow: 0 0 45px rgba(245, 158, 11, 0.35);
+.glow-gold-box:hover,
+.glow-titanium-box:hover {
+  box-shadow: 0 0 45px rgba(185, 180, 173, 0.35);
 }
 
 /* Luminous Pill Button */
@@ -662,12 +731,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-  color: #050816 !important;
+  background: linear-gradient(135deg, #2997ff 0%, #0071e3 100%);
+  color: #ffffff !important;
   font-weight: 700;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(41, 151, 255, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.5);
   cursor: pointer;
   text-decoration: none;
   transition: all var(--transition-fast);
@@ -675,10 +744,10 @@ a {
 }
 
 .btn-luminous-cyan:hover {
-  background: linear-gradient(135deg, #7dd3fc 0%, #0369a1 100%);
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #5ac8fa 0%, #0077ed 100%);
+  box-shadow: 0 0 30px rgba(41, 151, 255, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.7);
   transform: translateY(-2px);
-  color: #030712 !important;
+  color: #ffffff !important;
 }
 
 .btn-glass-pill {
@@ -686,10 +755,10 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #f5f5f7 !important;
   font-weight: 600;
   border-radius: var(--radius-pill);
   border: 1px solid var(--border-medium);
@@ -700,7 +769,7 @@ a {
 }
 
 .btn-glass-pill:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
   color: #ffffff !important;
@@ -869,7 +938,7 @@ a {
 .nav-desktop-link:hover {
   color: #ffffff !important;
   transform: translateY(-1.5px);
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+  text-shadow: 0 0 12px rgba(41, 151, 255, 0.45);
 }
 
 .nav-desktop-link:active {
@@ -883,14 +952,14 @@ a {
 }
 
 .btn-interactive:hover:not(:disabled) {
-  filter: brightness(1.1);
+  filter: brightness(1.08);
   transform: translateY(-2.5px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 8px 25px rgba(41, 151, 255, 0.35);
 }
 
 .btn-interactive:active:not(:disabled) {
   transform: translateY(1px) scale(0.98);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .btn-luminous-cyan,
@@ -899,13 +968,13 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #ffffff;
-  color: #050816 !important;
+  background: #f5f5f7;
+  color: #000000 !important;
   font-family: var(--font-body);
   font-weight: 700;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.2), inset 0 1px 1px #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 178, 140, 0.25), inset 0 1px 1px #ffffff;
   cursor: pointer;
   text-decoration: none;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
@@ -914,16 +983,16 @@ a {
 
 .btn-luminous-cyan:hover,
 .btn-hero-primary:hover {
-  background: #f8fafc;
-  color: #030712 !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 35px rgba(56, 189, 248, 0.35), inset 0 1px 1px #ffffff;
+  background: #ffffff;
+  color: #000000 !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 35px rgba(212, 178, 140, 0.4), inset 0 1px 1px #ffffff;
   transform: translateY(-2px) scale(1.02);
 }
 
 .btn-luminous-cyan:active,
 .btn-hero-primary:active {
   transform: translateY(1px) scale(0.98);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-glass-pill,

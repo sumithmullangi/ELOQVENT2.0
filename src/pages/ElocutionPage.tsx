@@ -40,7 +40,7 @@ export const ElocutionPage: React.FC = () => {
           paddingTop: 'clamp(2.5rem, 5vw, 4rem)',
           paddingBottom: 'clamp(3rem, 5vw, 4.5rem)',
           borderBottom: '1px solid var(--border-subtle)',
-          background: 'linear-gradient(180deg, rgba(13, 22, 38, 0.7) 0%, rgba(8, 12, 20, 0.4) 100%)',
+          background: 'linear-gradient(180deg, rgba(12, 20, 32, 0.75) 0%, rgba(0, 0, 0, 0.6) 100%)',
           overflow: 'hidden'
         }}
       >

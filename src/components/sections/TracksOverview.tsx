@@ -30,7 +30,7 @@ export const TracksOverview: React.FC = () => {
       aria-labelledby="tracks-heading"
       className="section-py"
       style={{
-        backgroundColor: '#050816',
+        backgroundColor: '#000000',
         borderBottom: '1px solid var(--border-subtle)',
         position: 'relative',
         overflow: 'hidden'
@@ -48,7 +48,7 @@ export const TracksOverview: React.FC = () => {
             left: '-10%',
             width: '450px',
             height: '450px',
-            background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(212, 178, 140, 0.09) 0%, transparent 70%)',
             filter: 'blur(80px)'
           }}
         />
@@ -59,7 +59,7 @@ export const TracksOverview: React.FC = () => {
             right: '-10%',
             width: '450px',
             height: '450px',
-            background: 'radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(41, 151, 255, 0.09) 0%, transparent 70%)',
             filter: 'blur(80px)'
           }}
         />
@@ -77,7 +77,7 @@ export const TracksOverview: React.FC = () => {
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.75rem',
                 fontWeight: 700,
-                color: 'var(--cyan-accent)',
+                color: 'var(--desert-titanium)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
                 marginBottom: '0.85rem'
@@ -95,7 +95,7 @@ export const TracksOverview: React.FC = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.035em',
                 lineHeight: 1.08,
-                color: '#ffffff',
+                color: '#f5f5f7',
                 marginBottom: '1rem',
                 textTransform: 'uppercase'
               }}
@@ -103,7 +103,7 @@ export const TracksOverview: React.FC = () => {
               TWO TRACKS.{' '}
               <span 
                 style={{
-                  background: 'linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #10b981 100%)',
+                  background: 'linear-gradient(135deg, #f5d7b5 0%, #d4b28c 45%, #2997ff 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}
@@ -133,15 +133,15 @@ export const TracksOverview: React.FC = () => {
                 className="track-card-innovex focus-visible-ring"
                 style={{
                   height: '100%',
-                  background: 'linear-gradient(180deg, rgba(8, 24, 20, 0.75) 0%, rgba(6, 14, 20, 0.95) 100%)',
-                  border: '1px solid rgba(16, 185, 129, 0.28)',
+                  background: 'linear-gradient(180deg, rgba(26, 20, 14, 0.82) 0%, rgba(12, 10, 8, 0.98) 100%)',
+                  border: '1px solid rgba(212, 178, 140, 0.32)',
                   borderRadius: 'var(--radius-xl)',
                   padding: 'clamp(1.75rem, 3.5vw, 2.75rem)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   position: 'relative',
-                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.45)',
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 178, 140, 0.12)',
                   boxSizing: 'border-box'
                 }}
               >
@@ -155,9 +155,9 @@ export const TracksOverview: React.FC = () => {
                         fontWeight: 700,
                         color: 'var(--innovex-accent)',
                         padding: '0.3rem 0.75rem',
-                        background: 'rgba(16, 185, 129, 0.12)',
+                        background: 'rgba(212, 178, 140, 0.12)',
                         borderRadius: 'var(--radius-pill)',
-                        border: '1px solid rgba(16, 185, 129, 0.3)',
+                        border: '1px solid rgba(212, 178, 140, 0.35)',
                         letterSpacing: '0.06em'
                       }}
                     >
@@ -168,7 +168,7 @@ export const TracksOverview: React.FC = () => {
                         fontFamily: 'var(--font-mono)',
                         fontSize: '2rem', 
                         fontWeight: 800, 
-                        color: 'rgba(16, 185, 129, 0.25)',
+                        color: 'rgba(212, 178, 140, 0.25)',
                         lineHeight: 1
                       }}
                     >
@@ -183,12 +183,12 @@ export const TracksOverview: React.FC = () => {
                         width: '52px',
                         height: '52px',
                         borderRadius: '12px',
-                        background: 'rgba(16, 185, 129, 0.15)',
-                        border: '1px solid rgba(16, 185, 129, 0.3)',
+                        background: 'rgba(212, 178, 140, 0.15)',
+                        border: '1px solid rgba(212, 178, 140, 0.35)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxShadow: '0 0 20px rgba(16, 185, 129, 0.25)',
+                        boxShadow: '0 0 20px rgba(212, 178, 140, 0.25)',
                         flexShrink: 0
                       }}
                     >
@@ -198,7 +198,7 @@ export const TracksOverview: React.FC = () => {
                       <h3 
                         style={{ 
                           fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', 
-                          color: '#ffffff', 
+                          color: '#f5f5f7', 
                           margin: 0, 
                           fontWeight: 800, 
                           letterSpacing: '-0.03em',
@@ -239,9 +239,9 @@ export const TracksOverview: React.FC = () => {
                             alignItems: 'center',
                             gap: '0.5rem',
                             padding: '0.45rem 0.65rem',
-                            background: 'rgba(10, 16, 36, 0.6)',
+                            background: 'rgba(18, 18, 20, 0.72)',
                             borderRadius: 'var(--radius-sm)',
-                            border: '1px solid rgba(255, 255, 255, 0.06)',
+                            border: '1px solid rgba(255, 255, 255, 0.08)',
                             fontSize: '0.8125rem',
                             color: 'var(--text-primary)',
                             fontWeight: 500
@@ -268,12 +268,12 @@ export const TracksOverview: React.FC = () => {
                       width: '100%',
                       padding: '0.875rem 1.5rem',
                       borderRadius: 'var(--radius-pill)',
-                      background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                      color: '#031c12',
+                      background: 'linear-gradient(135deg, #f5d7b5 0%, #d4b28c 50%, #9b7244 100%)',
+                      color: '#000000',
                       fontWeight: 700,
                       fontSize: '0.9375rem',
                       textDecoration: 'none',
-                      boxShadow: '0 0 20px rgba(16, 185, 129, 0.35)',
+                      boxShadow: '0 0 20px rgba(212, 178, 140, 0.35)',
                       transition: 'all var(--transition-fast)',
                       boxSizing: 'border-box'
                     }}
@@ -293,15 +293,15 @@ export const TracksOverview: React.FC = () => {
                 className="track-card-elocution focus-visible-ring"
                 style={{
                   height: '100%',
-                  background: 'linear-gradient(180deg, rgba(8, 20, 36, 0.75) 0%, rgba(6, 12, 24, 0.95) 100%)',
-                  border: '1px solid rgba(56, 189, 248, 0.28)',
+                  background: 'linear-gradient(180deg, rgba(12, 20, 32, 0.82) 0%, rgba(8, 12, 20, 0.98) 100%)',
+                  border: '1px solid rgba(41, 151, 255, 0.32)',
                   borderRadius: 'var(--radius-xl)',
                   padding: 'clamp(1.75rem, 3.5vw, 2.75rem)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   position: 'relative',
-                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.45)',
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(41, 151, 255, 0.12)',
                   boxSizing: 'border-box'
                 }}
               >
@@ -315,9 +315,9 @@ export const TracksOverview: React.FC = () => {
                         fontWeight: 700,
                         color: 'var(--elocution-accent)',
                         padding: '0.3rem 0.75rem',
-                        background: 'rgba(56, 189, 248, 0.12)',
+                        background: 'rgba(41, 151, 255, 0.12)',
                         borderRadius: 'var(--radius-pill)',
-                        border: '1px solid rgba(56, 189, 248, 0.3)',
+                        border: '1px solid rgba(41, 151, 255, 0.35)',
                         letterSpacing: '0.06em'
                       }}
                     >
@@ -328,7 +328,7 @@ export const TracksOverview: React.FC = () => {
                         fontFamily: 'var(--font-mono)',
                         fontSize: '2rem', 
                         fontWeight: 800, 
-                        color: 'rgba(56, 189, 248, 0.25)',
+                        color: 'rgba(41, 151, 255, 0.25)',
                         lineHeight: 1
                       }}
                     >
@@ -343,12 +343,12 @@ export const TracksOverview: React.FC = () => {
                         width: '52px',
                         height: '52px',
                         borderRadius: '12px',
-                        background: 'rgba(56, 189, 248, 0.15)',
-                        border: '1px solid rgba(56, 189, 248, 0.3)',
+                        background: 'rgba(41, 151, 255, 0.15)',
+                        border: '1px solid rgba(41, 151, 255, 0.35)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxShadow: '0 0 20px rgba(56, 189, 248, 0.25)',
+                        boxShadow: '0 0 20px rgba(41, 151, 255, 0.25)',
                         flexShrink: 0
                       }}
                     >
@@ -358,7 +358,7 @@ export const TracksOverview: React.FC = () => {
                       <h3 
                         style={{ 
                           fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', 
-                          color: '#ffffff', 
+                          color: '#f5f5f7', 
                           margin: 0, 
                           fontWeight: 800, 
                           letterSpacing: '-0.03em',
@@ -399,9 +399,9 @@ export const TracksOverview: React.FC = () => {
                             alignItems: 'center',
                             gap: '0.5rem',
                             padding: '0.45rem 0.65rem',
-                            background: 'rgba(10, 16, 36, 0.6)',
+                            background: 'rgba(18, 18, 20, 0.72)',
                             borderRadius: 'var(--radius-sm)',
-                            border: '1px solid rgba(255, 255, 255, 0.06)',
+                            border: '1px solid rgba(255, 255, 255, 0.08)',
                             fontSize: '0.8125rem',
                             color: 'var(--text-primary)',
                             fontWeight: 500
@@ -428,12 +428,12 @@ export const TracksOverview: React.FC = () => {
                       width: '100%',
                       padding: '0.875rem 1.5rem',
                       borderRadius: 'var(--radius-pill)',
-                      background: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)',
-                      color: '#04101e',
+                      background: 'linear-gradient(135deg, #5ac8fa 0%, #2997ff 60%, #0071e3 100%)',
+                      color: '#ffffff',
                       fontWeight: 700,
                       fontSize: '0.9375rem',
                       textDecoration: 'none',
-                      boxShadow: '0 0 20px rgba(56, 189, 248, 0.35)',
+                      boxShadow: '0 0 20px rgba(41, 151, 255, 0.35)',
                       transition: 'all var(--transition-fast)',
                       boxSizing: 'border-box'
                     }}

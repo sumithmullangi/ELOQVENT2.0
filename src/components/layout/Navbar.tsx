@@ -113,12 +113,12 @@ export const Navbar: React.FC = () => {
           top: 0,
           zIndex: 50,
           height: 'var(--nav-height)',
-          backgroundColor: scrolled ? 'rgba(5, 8, 22, 0.92)' : 'rgba(5, 8, 22, 0.75)',
-          backdropFilter: 'blur(16px)',
-          WebkitBackdropFilter: 'blur(16px)',
+          backgroundColor: scrolled ? 'rgba(0, 0, 0, 0.88)' : 'rgba(0, 0, 0, 0.72)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
           borderBottom: `1px solid ${scrolled ? 'var(--border-medium)' : 'var(--border-subtle)'}`,
           transition: 'background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base)',
-          boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.4)' : 'none'
+          boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.6)' : 'none'
         }}
       >
         <div
@@ -150,37 +150,37 @@ export const Navbar: React.FC = () => {
                 width: '38px',
                 height: '38px',
                 borderRadius: '10px',
-                background: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 50%, #10b981 100%)',
+                background: 'linear-gradient(135deg, #d4b28c 0%, #f5d7b5 40%, #2997ff 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 0 18px rgba(56, 189, 248, 0.35)',
-                border: '1px solid rgba(255, 255, 255, 0.25)',
+                boxShadow: '0 0 18px rgba(212, 178, 140, 0.35)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
                 flexShrink: 0
               }}
             >
-              <Sparkles size={20} color="#050816" aria-hidden="true" />
+              <Sparkles size={20} color="#000000" aria-hidden="true" />
             </div>
             <div>
               <div
                 style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '1.25rem',
-                  fontWeight: 800,
-                  letterSpacing: '-0.02em',
+                  fontFamily: 'var(--font-lining)',
+                  fontSize: '1.05rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.06em',
                   lineHeight: 1,
-                  color: '#ffffff',
+                  color: '#f5f5f7',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.35rem'
                 }}
               >
                 ELOQVENT <span style={{ 
-                  background: 'linear-gradient(135deg, #38bdf8 0%, #a855f7 100%)',
+                  background: 'linear-gradient(135deg, #d4b28c 0%, #2997ff 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  fontWeight: 800,
-                  fontSize: '1.15rem'
+                  fontWeight: 700,
+                  fontSize: '0.95rem'
                 }}>2K26</span>
               </div>
               <div
@@ -323,9 +323,9 @@ export const Navbar: React.FC = () => {
             position: 'fixed',
             inset: 0,
             zIndex: 49,
-            backgroundColor: 'rgba(5, 8, 22, 0.96)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
+            backgroundColor: 'rgba(0, 0, 0, 0.96)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -362,7 +362,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   fontFamily: 'var(--font-mono)',
                   fontSize: '0.75rem',
-                  color: 'var(--cyan-accent)'
+                  color: 'var(--desert-titanium)'
                 }}
               >
                 Two Tracks • One Experience
@@ -400,14 +400,14 @@ export const Navbar: React.FC = () => {
                           fontWeight: active ? 700 : 500,
                           fontSize: '1rem',
                           textDecoration: 'none',
-                          borderLeft: active ? '3px solid var(--elocution-accent)' : '3px solid transparent',
+                          borderLeft: active ? '3px solid var(--desert-titanium)' : '3px solid transparent',
                           transition: 'background-color var(--transition-fast)'
                         }}
                       >
                         <span>{link.name}</span>
                         <ChevronRight
                           size={16}
-                          color={active ? 'var(--elocution-accent)' : 'var(--text-muted)'}
+                          color={active ? 'var(--desert-titanium)' : 'var(--text-muted)'}
                           aria-hidden="true"
                         />
                       </Link>
@@ -433,7 +433,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   padding: '0.75rem',
                   borderRadius: 'var(--radius-md)',
-                  background: 'rgba(56, 189, 248, 0.08)',
+                  background: 'rgba(41, 151, 255, 0.08)',
                   border: '1px solid var(--elocution-border)',
                   color: 'var(--elocution-accent)',
                   fontSize: '0.8125rem',
@@ -451,7 +451,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   padding: '0.75rem',
                   borderRadius: 'var(--radius-md)',
-                  background: 'rgba(16, 185, 129, 0.08)',
+                  background: 'rgba(212, 178, 140, 0.08)',
                   border: '1px solid var(--innovex-border)',
                   color: 'var(--innovex-accent)',
                   fontSize: '0.8125rem',

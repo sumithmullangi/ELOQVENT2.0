@@ -23,7 +23,7 @@ export const ParticleBackground: React.FC = () => {
     let width = (canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth);
     let height = (canvas.height = canvas.parentElement?.offsetHeight || window.innerHeight);
 
-    const colors = ['#38bdf8', '#10b981', '#38bdf8', '#a855f7', '#34d399'];
+    const colors = ['#2997ff', '#d4b28c', '#b9b4ad', '#f5f5f7', '#e8cbb0'];
     const particleCount = Math.min(Math.floor(width / 28), 55);
     const particles: Particle[] = [];
 

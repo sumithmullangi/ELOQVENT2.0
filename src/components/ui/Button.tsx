@@ -75,18 +75,18 @@ export const Button: React.FC<ButtonProps> = ({
   // Variant styles
   const variantStyles: Record<ButtonVariant, React.CSSProperties> = {
     primary: {
-      background: '#ffffff',
-      color: '#050816',
+      background: '#f5f5f7',
+      color: '#000000',
       border: '1px solid rgba(255, 255, 255, 0.9)',
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.2), inset 0 1px 1px #ffffff',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 178, 140, 0.25), inset 0 1px 1px #ffffff',
       fontWeight: 700
     },
     secondary: {
-      background: 'rgba(255, 255, 255, 0.05)',
-      color: '#f8fafc',
-      border: '1px solid rgba(255, 255, 255, 0.18)',
-      backdropFilter: 'blur(12px)',
-      WebkitBackdropFilter: 'blur(12px)'
+      background: 'rgba(255, 255, 255, 0.06)',
+      color: '#f5f5f7',
+      border: '1px solid rgba(255, 255, 255, 0.16)',
+      backdropFilter: 'blur(14px)',
+      WebkitBackdropFilter: 'blur(14px)'
     },
     ghost: {
       background: 'transparent',
@@ -98,15 +98,15 @@ export const Button: React.FC<ButtonProps> = ({
       border: '1px solid var(--border-bright)'
     },
     innovex: {
-      background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-      color: '#031c12',
-      boxShadow: '0 4px 16px rgba(16, 185, 129, 0.3)',
+      background: 'linear-gradient(135deg, #f5d7b5 0%, #d4b28c 50%, #9b7244 100%)',
+      color: '#000000',
+      boxShadow: '0 4px 18px rgba(212, 178, 140, 0.35)',
       fontWeight: 700
     },
     elocution: {
-      background: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)',
-      color: '#04101e',
-      boxShadow: '0 4px 16px rgba(56, 189, 248, 0.3)',
+      background: 'linear-gradient(135deg, #5ac8fa 0%, #2997ff 60%, #0071e3 100%)',
+      color: '#ffffff',
+      boxShadow: '0 4px 18px rgba(41, 151, 255, 0.35)',
       fontWeight: 700
     },
     disabled: {

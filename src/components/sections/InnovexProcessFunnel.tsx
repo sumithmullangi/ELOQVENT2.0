@@ -52,15 +52,15 @@ export const InnovexProcessFunnel: React.FC = () => {
 
           <defs>
             <linearGradient id="funnelGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#10b981" stopOpacity="0.8" />
+              <stop offset="0%" stopColor="#2997ff" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#d4b28c" stopOpacity="0.8" />
             </linearGradient>
             <linearGradient id="funnelGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#10b981" stopOpacity="0.25" />
-              <stop offset="100%" stopColor="#081c14" stopOpacity="0.9" />
+              <stop offset="0%" stopColor="#d4b28c" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#14100c" stopOpacity="0.9" />
             </linearGradient>
             <filter id="glowEffect" x="-10%" y="-10%" width="120%" height="120%">
-              <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#10b981" floodOpacity="0.2" />
+              <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#d4b28c" floodOpacity="0.25" />
             </filter>
           </defs>
 
@@ -68,64 +68,64 @@ export const InnovexProcessFunnel: React.FC = () => {
           <path 
             d="M 40 40 Q 430 110 820 40 L 760 260 Q 430 200 100 260 Z" 
             fill="url(#funnelGradient2)" 
-            stroke="rgba(16, 185, 129, 0.2)" 
+            stroke="rgba(212, 178, 140, 0.25)" 
             strokeWidth="1"
           />
 
           {/* Stage 1: Broad Theme */}
           <g transform="translate(40, 60)">
-            <rect width="130" height="70" rx="8" fill="#0d1626" stroke="#38bdf8" strokeWidth="1.5" />
-            <text x="65" y="28" fill="#38bdf8" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 01</text>
-            <text x="65" y="46" fill="#ffffff" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Broad Theme</text>
-            <text x="65" y="58" fill="#94a3b8" fontFamily="sans-serif" fontSize="9" textAnchor="middle">5 SDGs</text>
+            <rect width="130" height="70" rx="8" fill="#121824" stroke="#2997ff" strokeWidth="1.5" />
+            <text x="65" y="28" fill="#2997ff" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 01</text>
+            <text x="65" y="46" fill="#f5f5f7" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Broad Theme</text>
+            <text x="65" y="58" fill="#86868b" fontFamily="sans-serif" fontSize="9" textAnchor="middle">5 SDGs</text>
           </g>
 
           {/* Connector Arrow 1 */}
-          <path d="M 175 95 L 205 95" stroke="#38bdf8" strokeWidth="2" strokeDasharray="3 3" />
-          <polygon points="208,95 200,90 200,100" fill="#38bdf8" />
+          <path d="M 175 95 L 205 95" stroke="#2997ff" strokeWidth="2" strokeDasharray="3 3" />
+          <polygon points="208,95 200,90 200,100" fill="#2997ff" />
 
           {/* Stage 2: People & Empathy */}
           <g transform="translate(210, 60)">
-            <rect width="130" height="70" rx="8" fill="#0d1626" stroke="#38bdf8" strokeWidth="1.5" />
-            <text x="65" y="28" fill="#38bdf8" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 02</text>
-            <text x="65" y="46" fill="#ffffff" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">People &amp; Context</text>
-            <text x="65" y="58" fill="#94a3b8" fontFamily="sans-serif" fontSize="9" textAnchor="middle">Empathy Audits</text>
+            <rect width="130" height="70" rx="8" fill="#121824" stroke="#2997ff" strokeWidth="1.5" />
+            <text x="65" y="28" fill="#2997ff" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 02</text>
+            <text x="65" y="46" fill="#f5f5f7" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">People &amp; Context</text>
+            <text x="65" y="58" fill="#86868b" fontFamily="sans-serif" fontSize="9" textAnchor="middle">Empathy Audits</text>
           </g>
 
           {/* Connector Arrow 2 */}
-          <path d="M 345 95 L 375 95" stroke="#10b981" strokeWidth="2" strokeDasharray="3 3" />
-          <polygon points="378,95 370,90 370,100" fill="#10b981" />
+          <path d="M 345 95 L 375 95" stroke="#d4b28c" strokeWidth="2" strokeDasharray="3 3" />
+          <polygon points="378,95 370,90 370,100" fill="#d4b28c" />
 
           {/* Stage 3: Root Cause Insight */}
           <g transform="translate(380, 60)">
-            <rect width="130" height="70" rx="8" fill="#081c14" stroke="#10b981" strokeWidth="1.5" filter="url(#glowEffect)" />
-            <text x="65" y="28" fill="#10b981" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 03</text>
-            <text x="65" y="46" fill="#ffffff" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Root Cause</text>
-            <text x="65" y="58" fill="#34d399" fontFamily="sans-serif" fontSize="9" textAnchor="middle">5-Whys Synthesis</text>
+            <rect width="130" height="70" rx="8" fill="#1c1610" stroke="#d4b28c" strokeWidth="1.5" filter="url(#glowEffect)" />
+            <text x="65" y="28" fill="#d4b28c" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 03</text>
+            <text x="65" y="46" fill="#f5f5f7" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Root Cause</text>
+            <text x="65" y="58" fill="#e8cbb0" fontFamily="sans-serif" fontSize="9" textAnchor="middle">5-Whys Synthesis</text>
           </g>
 
           {/* Connector Arrow 3 */}
-          <path d="M 515 95 L 545 95" stroke="#10b981" strokeWidth="2" strokeDasharray="3 3" />
-          <polygon points="548,95 540,90 540,100" fill="#10b981" />
+          <path d="M 515 95 L 545 95" stroke="#d4b28c" strokeWidth="2" strokeDasharray="3 3" />
+          <polygon points="548,95 540,90 540,100" fill="#d4b28c" />
 
           {/* Stage 4: Frugal Solution */}
           <g transform="translate(550, 60)">
-            <rect width="130" height="70" rx="8" fill="#081c14" stroke="#10b981" strokeWidth="1.5" />
-            <text x="65" y="28" fill="#10b981" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 04</text>
-            <text x="65" y="46" fill="#ffffff" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Frugal Prototype</text>
-            <text x="65" y="58" fill="#94a3b8" fontFamily="sans-serif" fontSize="9" textAnchor="middle">Architecture</text>
+            <rect width="130" height="70" rx="8" fill="#1c1610" stroke="#d4b28c" strokeWidth="1.5" />
+            <text x="65" y="28" fill="#d4b28c" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 04</text>
+            <text x="65" y="46" fill="#f5f5f7" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Frugal Prototype</text>
+            <text x="65" y="58" fill="#86868b" fontFamily="sans-serif" fontSize="9" textAnchor="middle">Architecture</text>
           </g>
 
           {/* Connector Arrow 4 */}
-          <path d="M 685 95 L 715 95" stroke="#34d399" strokeWidth="2" strokeDasharray="3 3" />
-          <polygon points="718,95 710,90 710,100" fill="#34d399" />
+          <path d="M 685 95 L 715 95" stroke="#e8cbb0" strokeWidth="2" strokeDasharray="3 3" />
+          <polygon points="718,95 710,90 710,100" fill="#e8cbb0" />
 
           {/* Stage 5: Scalable Impact */}
           <g transform="translate(720, 60)">
-            <rect width="110" height="70" rx="8" fill="#06160e" stroke="#34d399" strokeWidth="2" filter="url(#glowEffect)" />
-            <text x="55" y="28" fill="#34d399" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 05</text>
-            <text x="55" y="46" fill="#ffffff" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Social Impact</text>
-            <text x="55" y="58" fill="#34d399" fontFamily="sans-serif" fontSize="9" fontWeight="bold" textAnchor="middle">Venture Pitch</text>
+            <rect width="110" height="70" rx="8" fill="#14100c" stroke="#e8cbb0" strokeWidth="2" filter="url(#glowEffect)" />
+            <text x="55" y="28" fill="#e8cbb0" fontFamily="sans-serif" fontSize="10" fontWeight="bold" textAnchor="middle" letterSpacing="1">STAGE 05</text>
+            <text x="55" y="46" fill="#f5f5f7" fontFamily="sans-serif" fontSize="11" fontWeight="bold" textAnchor="middle">Social Impact</text>
+            <text x="55" y="58" fill="#e8cbb0" fontFamily="sans-serif" fontSize="9" fontWeight="bold" textAnchor="middle">Venture Pitch</text>
           </g>
 
           {/* Bottom Summary Ribbon inside SVG */}

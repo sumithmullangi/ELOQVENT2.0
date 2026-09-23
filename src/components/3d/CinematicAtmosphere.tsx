@@ -48,52 +48,52 @@ export const CinematicAtmosphere: React.FC<CinematicAtmosphereProps> = ({
 
     window.addEventListener('resize', handleResize);
 
-    // Cinematic Volumetric Light Blobs
+    // Cinematic Volumetric Light Blobs (Apple iPhone Pro Titanium Atmospheric Glow)
     const lights = [
-      // 1. Primary Deep Electric Blue Diffusion (Top-Center)
+      // 1. Desert Titanium Warm Amber Diffusion (Top-Center)
       {
         baseX: 0.5,
         baseY: 0.15,
         radius: 0.55,
-        colorStop0: 'rgba(37, 99, 235, 0.18)',
-        colorStop1: 'rgba(30, 58, 138, 0.08)',
-        colorStop2: 'rgba(5, 8, 22, 0)',
+        colorStop0: 'rgba(212, 178, 140, 0.16)',
+        colorStop1: 'rgba(168, 128, 90, 0.06)',
+        colorStop2: 'rgba(0, 0, 0, 0)',
         speedX: 0.0003,
         speedY: 0.00025,
         phase: 0
       },
-      // 2. Soft Violet / Purple Atmospheric Mass (Right-Center)
+      // 2. Apple Pro Electric Blue Glow (Right-Center)
       {
         baseX: 0.82,
         baseY: 0.45,
         radius: 0.48,
-        colorStop0: 'rgba(139, 92, 246, 0.14)',
-        colorStop1: 'rgba(91, 33, 182, 0.06)',
-        colorStop2: 'rgba(5, 8, 22, 0)',
+        colorStop0: 'rgba(41, 151, 255, 0.14)',
+        colorStop1: 'rgba(0, 113, 227, 0.05)',
+        colorStop2: 'rgba(0, 0, 0, 0)',
         speedX: 0.0002,
         speedY: 0.00035,
         phase: Math.PI / 3
       },
-      // 3. Cyan Volumetric Accent (Left-Lower)
+      // 3. Natural Titanium Silver-Champagne Volumetric Accent (Left-Lower)
       {
         baseX: 0.18,
         baseY: 0.65,
         radius: 0.42,
-        colorStop0: 'rgba(56, 189, 248, 0.12)',
-        colorStop1: 'rgba(2, 132, 199, 0.05)',
-        colorStop2: 'rgba(5, 8, 22, 0)',
+        colorStop0: 'rgba(185, 180, 173, 0.12)',
+        colorStop1: 'rgba(124, 119, 112, 0.04)',
+        colorStop2: 'rgba(0, 0, 0, 0)',
         speedX: 0.00025,
         speedY: 0.0002,
         phase: Math.PI / 1.5
       },
-      // 4. Subtle Emerald / Mint Undertone (Bottom-Center for Innovex synergy)
+      // 4. Apple Intelligence Soft Violet / Deep Siri Tone (Bottom-Center)
       {
         baseX: 0.45,
         baseY: 0.85,
         radius: 0.38,
-        colorStop0: 'rgba(16, 185, 129, 0.08)',
-        colorStop1: 'rgba(5, 150, 105, 0.03)',
-        colorStop2: 'rgba(5, 8, 22, 0)',
+        colorStop0: 'rgba(175, 82, 222, 0.08)',
+        colorStop1: 'rgba(91, 33, 182, 0.03)',
+        colorStop2: 'rgba(0, 0, 0, 0)',
         speedX: 0.00018,
         speedY: 0.00028,
         phase: Math.PI
@@ -104,8 +104,8 @@ export const CinematicAtmosphere: React.FC<CinematicAtmosphereProps> = ({
     let time = 0;
 
     const render = () => {
-      // Clear with base deep obsidian tone
-      ctx.fillStyle = '#050816';
+      // Clear with Apple pure OLED pitch black tone
+      ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, width, height);
 
       // Smooth mouse lerping (extremely subtle offset)
@@ -184,12 +184,12 @@ export const CinematicAtmosphere: React.FC<CinematicAtmosphereProps> = ({
           position: 'absolute',
           inset: 0,
           backgroundImage: `
-            radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0),
-            radial-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 0)
+            radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0),
+            radial-gradient(rgba(212, 178, 140, 0.025) 1px, transparent 0)
           `,
           backgroundSize: '24px 24px, 48px 48px',
           backgroundPosition: '0 0, 12px 12px',
-          opacity: 0.7,
+          opacity: 0.6,
           mixBlendMode: 'screen'
         }}
       />
@@ -199,7 +199,7 @@ export const CinematicAtmosphere: React.FC<CinematicAtmosphereProps> = ({
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse 90% 80% at 50% 50%, transparent 50%, rgba(3, 7, 18, 0.6) 100%)',
+          background: 'radial-gradient(ellipse 90% 80% at 50% 50%, transparent 50%, rgba(0, 0, 0, 0.75) 100%)',
           pointerEvents: 'none'
         }}
       />

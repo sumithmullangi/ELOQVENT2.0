@@ -8,11 +8,11 @@ interface ThemeCardProps {
 
 export const ThemeCard: React.FC<ThemeCardProps> = ({ theme }) => {
   const iconMap: Record<string, React.ReactNode> = {
-    HeartPulse: <HeartPulse size={24} color="#f43f5e" />,
-    Sprout: <Sprout size={24} color="#10b981" />,
-    Droplets: <Droplets size={24} color="#38bdf8" />,
-    Recycle: <Recycle size={24} color="#34d399" />,
-    GraduationCap: <GraduationCap size={24} color="#a855f7" />
+    HeartPulse: <HeartPulse size={24} color="#ff453a" />,
+    Sprout: <Sprout size={24} color="var(--desert-titanium)" />,
+    Droplets: <Droplets size={24} color="var(--pro-blue)" />,
+    Recycle: <Recycle size={24} color="var(--natural-titanium)" />,
+    GraduationCap: <GraduationCap size={24} color="#f5f5f7" />
   };
 
   return (
@@ -37,7 +37,7 @@ export const ThemeCard: React.FC<ThemeCardProps> = ({ theme }) => {
               fontWeight: 700,
               color: 'var(--innovex-accent)',
               padding: '0.2rem 0.5rem',
-              background: 'rgba(16, 185, 129, 0.1)',
+              background: 'rgba(212, 178, 140, 0.12)',
               borderRadius: '4px'
             }}
           >

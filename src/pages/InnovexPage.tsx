@@ -49,7 +49,7 @@ export const InnovexPage: React.FC = () => {
           paddingTop: 'clamp(2.5rem, 5vw, 4rem)',
           paddingBottom: 'clamp(3rem, 5vw, 4.5rem)',
           borderBottom: '1px solid var(--border-subtle)',
-          background: 'linear-gradient(180deg, rgba(8, 28, 20, 0.7) 0%, rgba(8, 12, 20, 0.4) 100%)',
+          background: 'linear-gradient(180deg, rgba(28, 22, 16, 0.75) 0%, rgba(0, 0, 0, 0.6) 100%)',
           overflow: 'hidden'
         }}
       >
